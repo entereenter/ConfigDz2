@@ -94,12 +94,12 @@ class TestDependencyVisualizer(unittest.TestCase):
     def test_save_graph_to_file_error(self, mock_print, mock_subprocess_run):
         save_graph_to_file("digraph {}", "output.png", "dot")
 
-        # Проверяем, что subprocess.run был вызван
+        # Проверяем что subprocess.run был вызван
         mock_subprocess_run.assert_called_once_with(
             ["dot", "-Tpng", "temp_graph.dot", "-o", "output.png"], check=True
         )
 
-        # Проверяем, что сообщение об ошибке было выведено
+        # Проверяем что сообщение об ошибке было выведено
         mock_print.assert_any_call("Ошибка при генерации графа: Command 'dot' returned non-zero exit status 1.")
 
 
