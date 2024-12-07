@@ -103,6 +103,7 @@ class TestDependencyVisualizer(unittest.TestCase):
         mock_print.assert_any_call("Ошибка при генерации графа: Command 'dot' returned non-zero exit status 1.")
 
 
+
 if __name__ == "__main__":
     unittest.main()
 
